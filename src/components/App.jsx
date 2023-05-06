@@ -2,7 +2,9 @@ import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Layout } from './Layout/Layout.styled';
 import { Searchbar } from './Searchbar/Searchbar';
 import { Button } from './Button/Button';
+// import { Component, useState } from 'react';
 import { Component } from 'react';
+
 import { Loader } from './Loader/Loader';
 import * as API from '../api';
 
@@ -71,3 +73,33 @@ export class App extends Component {
     );
   }
 }
+
+// export const App = () => {
+//   const [searchName, setSearchName] = useState('');
+//   const [pictures, setPictures] = useState([]);
+//   const [loading, setLoading] = useState(false);
+//   const [error, setError] = useState(null);
+//   const [page, setPage] = useState(1);
+
+//   const handleFormSearch = () => {
+//     setSearchName(searchName);
+//     setPage(1);
+//     setPictures([]);
+//   };
+
+//   const handleLoadMore = () => {
+//     setPage(prev => prev + 1);
+//   };
+
+//   return (
+//     <Layout>
+//       <Searchbar onSearch={handleFormSearch} />
+
+//       {error && <h1>{error} </h1>}
+//       {pictures && <ImageGallery searchName={searchName} pictures={pictures} />}
+//       {loading && <Loader />}
+
+//       {pictures && pictures.length > 0 && <Button onClick={handleLoadMore} />}
+//     </Layout>
+//   );
+// };
